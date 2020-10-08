@@ -1,0 +1,56 @@
+<html lang="en">
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img{
+        display: block;
+        margin-bottom: 2em;
+        margin-top: 2em;
+       
+    }
+
+    p, img{
+        max-width: 800px;
+    }
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Başka Projeye Katkı Sağlama</title>
+</head>
+<body>
+    <div>
+        <h1>Başka Bir Github Projesine Katkı Sağlama</h1>
+        <a href="https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/">
+            Orijinal ingilizce link için tıkla.
+        </a>
+        <p>
+            Bu sayfada farklı bir projeye katkı sağlam ile ilkili gereken komutlar listelenmiştir.
+            Sayfa şu an yazarın anlayacağı şekilde hazırlanmış olsa da ihtiyaca göre ek ayrıntılar eklenecektir.
+        </p>
+        <img src="flow.png" alt="">
+        <p>Asıl projeyi Github üzerinden fork et.</p>
+        <p>Kendi repository'ndeki projeyi aşağıdaki komutla bilgisayarına aktar.</p>
+        <pre>git clone [github-repo-ssh-linki]</pre>
+        <p>Örnek</p>
+        <pre>git clone git@github.com:akrabat/zend-validator.git</pre>
+        <p>Proje indirildikten sonraki git komutları projenin içindeki yolda girilir.</p>
+        <pre>cd proje-adi</pre>
+        <p>Projenin asıl kaynağını göstermek için upstream ekle.</p>
+        <pre>git remote add upstream [asıl-proje-ssh-linki]</pre>
+        <p>Değişikliklere başlamadan orijinal sürümü lokale ve fork edilmiş remote projeye aktar.</p>
+        <pre>git pull upstream master && git push origin master</pre>
+        <p>...</p>
+        <p>...</p>
+        <p>Değişiklikler yapıldıktan sonra</p>
+        <pre>git add .</pre>
+        <pre>git commit -m "açıklama"</pre>
+        <pre>git push origin master</pre>
+        <p>Bu aşama sonrasında githubta <code>create pull request</code> üzerinden katkı isteği yapılabilir.  </p>
+    </div>
+</body>
+</html>
